@@ -1,13 +1,18 @@
 package com.mderyol.bean;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-@Component
-@ConfigurationProperties("limits-service")
-public class Configuration {
+public class Limits {
 	private int minimum;
 	private int maximum;
+
+	public Limits() {
+		super();
+	}
+
+	public Limits(int minimum, int maximum) {
+		super();
+		this.minimum = minimum;
+		this.maximum = maximum;
+	}
 
 	public int getMinimum() {
 		return minimum;
